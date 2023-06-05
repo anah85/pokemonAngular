@@ -1,0 +1,26 @@
+<section>
+<div class="center">
+    <h1>Formulario nuevo Pokemon</h1>
+    <form novalidate (ngSubmit)="onSubmit()" [formGroup]="pokeRegisterForm">
+      <div class="inputbox">
+        <input type="text" id="name" formControlName="name">
+        <span>Nombre</span>
+      </div>
+      <div class="inputbox">
+        <input type="number" id="weight" formControlName="weight">
+        <span>Peso</span>
+      </div>
+      <div class="inputbox">
+        <input type="text" id="type" formControlName="type">
+        <span>Tipo</span>
+      </div>
+      <div class="inputbox">
+        <input type="text" id="front_default" formControlName="front_default">
+        <span>Imagen</span>
+      </div>
+      <div class="inputbox">
+        <input type="submit" [disabled]="!pokeRegisterForm.valid">
+      </div>
+    </form>
+  </div>
+</section>

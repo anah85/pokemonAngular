@@ -1,0 +1,14 @@
+<div class="wrap">
+    <div class="box" *ngFor="let poke of pokemon">
+      <div class="box-top">
+        <img class="box-image" [src]="poke.sprites.front_default" alt="Pokemon">
+        <div class="title-flex">
+          <h3 class="box-title">{{poke.name | titlecase}} </h3>
+          <p class="user-follow-info"># {{poke.id}}</p>
+        </div>
+        <p class="description">Weight: {{poke.weight}} kg</p>
+        <p class="description">Type: {{poke.types[0].type.name | titlecase}}, {{poke.types[1].type.name | titlecase}}</p>
+      </div>
+    </div>
+    
+  </div>
